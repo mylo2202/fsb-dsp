@@ -2,3 +2,9 @@ bs4
 jupytext
 matplotlib
 matplotlib-inline
+jupyterlab
+scipy
+pooch
+sounddevice
+simpleaudio
+soundfile

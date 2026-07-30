@@ -1,3 +1,8 @@
+Create a virtual environment
+```bash
+python -m venv venv
+```
+
 Install dependencies:
 
 ```bash
@@ -23,4 +28,22 @@ Or pair every notebook in your project by adding a `jupytext.toml` file:
 
 ```
 formats = "ipynb,py:percent"
+```
+
+Install JupyterLab inside an isolated environment:
+
+```bash
+pip install jupyterlab
+```
+
+Launch JupyterLab:
+
+```bash
+jupyter lab
+```
+
+In order to use sounddevice, install libportaudio2:
+
+```bash
+sudo apt-get install libportaudio2
 ```
