@@ -1,6 +1,7 @@
-Create a virtual environment
+Create a virtual environment:
+
 ```bash
-python -m venv venv
+python -m venv .venv
 ```
 
 Install dependencies:
@@ -28,6 +29,12 @@ Or pair every notebook in your project by adding a `jupytext.toml` file:
 
 ```
 formats = "ipynb,py:percent"
+```
+
+You can also do so by using this command:
+
+```bash
+jupytext --set-formats ipynb,py:percent **/*.ipynb
 ```
 
 Install JupyterLab inside an isolated environment:

@@ -6,5 +6,4 @@ jupyterlab
 scipy
 pooch
 sounddevice
-simpleaudio
 soundfile
