@@ -13,13 +13,16 @@
 #     name: python3
 # ---
 
-# %% [markdown]
+# %% [markdown] id="04fa0d03"
 # # Digital Signal Processing - Session 6
 
-# %% [markdown]
+# %% [markdown] id="3f1bd8c3"
 # ## Implement the DFT and FFT in Python
 
-# %%
+# %% [markdown] id="e48b49a5"
+# Define a function `dft` to manually compute the Discrete Fourier Transform (DFT) of a given signal `x`, then use with a simple example signal `[2, 1]` and print the result.
+
+# %% id="75c3af84" outputId="75c59221-4a5c-49f5-b6ab-da55777a21dc"
 import numpy as np
 
 def dft(x):
@@ -39,7 +42,10 @@ X_manual = dft(x)
 
 print(X_manual)
 
-# %%
+# %% [markdown] id="115cae50"
+# Use NumPy's built-in Fast Fourier Transform (FFT) function, `np.fft.fft`, to compute the FFT of the same example signal `[2, 1]` for comparison.
+
+# %% id="7aff5df5" outputId="7dd5628e-277c-464e-b4ed-f12ab9fa9afb"
 import numpy as np
 
 # Example signal
@@ -49,7 +55,10 @@ x = np.array([2, 1])
 X_fft = np.fft.fft(x)
 print(X_fft)
 
-# %%
+# %% [markdown] id="75c62609"
+# Plot the time domain of a sinusoidal signal with two different frequencies and add some random noise to it.
+
+# %% id="27a3ba35" outputId="e0cde786-c2f9-41e7-cf41-fc470d9d9f76"
 import matplotlib.pyplot as plt
 from scipy.fftpack import fft
 import numpy as np
@@ -73,7 +82,11 @@ plt.title('Sinusoidal Signal')
 plt.xlabel('Time (s)')
 plt.ylabel('Amplitude')
 
-# %%
+# %% [markdown] id="3dcd499e"
+# Calculate the frequency axis for the spectrum, compute the FFT of the generated signal `x` using `scipy.fftpack.fft`, and then calculate the magnitude of the spectrum, then plot the magnitude spectrum, showing the frequency components of the signal.
+#
+
+# %% id="5caef98e" outputId="ac66ab58-12d7-4057-e10c-5027d3c67a94"
 # Generate freqeuncy axis
 n = np.size(t)
 # We just need half of the samples in frequency domain since the signal is real-valued
